@@ -30,7 +30,7 @@ fetch('parks.json')
 
 var ourRequest = new XMLHttpRequest();
 ourRequest.open ("GET", 'https://github.com/PennySeamer/Palmerston_Parks/blob/master/js/parks.json')
-ourRequest,onload = function(){
+ourRequest.onload = function(){
   console.log(ourRequest.responseText);
 };
 function createHTML(parksData){
