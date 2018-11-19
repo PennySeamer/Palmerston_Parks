@@ -22,35 +22,18 @@
     </nav>
   </header>
 
-  <main class="card">
-
-      <h2> Parks </h2>
-    <ul>
-           <li><a href="marlows.html"> Marlows's Lagoon</a> </li>
-           <li><a href="lakes.html"> Sancturary Lakes</a></li>
-          <li><a href="flynn.html"> Flynn Park</a></li>
-    </ul>
-
-  </main>
-
-<body>
-
+<div id ="parks-Container"> </div>
 <h1></h1>
-
-<button id = "bellamack"> Bellamack </button>
-<button id = "listSubs"> Driver</button>
-<button id = "listSubs"> Rosebery </button>
-
-
-<listSubs></listSubs>
-
-<listNames></listNames>
-
+<script id ="parksTemplate" type="text/x-handlebars-template">
+  {{#each parks}}
+  <h2> {{Name}}
+  {{/each}}
+</script>
 
 
     <p><button onclick="geoFindMe()">Show my location</button></p>
 <div id="out"></div>
-
+  <script src = "handlebars-v4.0.12.js"></script>
   <script src = "main.js"></script>
   </body>
 

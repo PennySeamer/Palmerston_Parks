@@ -1,3 +1,4 @@
+
 //get json data for suburbs
 var myList = document.querySelector('listSubs');
 
@@ -32,3 +33,11 @@ document.getElementById("bellamack").onclick = displayBell;
     listItem.innerHTML +=json.parks[i].Name;
     listItem.innerHTML +=json.parks[i].features;
     displayBell.appendChild(listItem);
+
+function createHTML(parksData){
+  var rawTemplate = document.getElementById("parksTemplate").innerHTML;
+  var compiledTemplate = Handlebars.compile(rawTemplate);
+  var ourGeneratedHTML = compiledTemplate(parksData);
+  var parksContainer = document.getElementById("parks-Container");
+  parksContainer.innerHTML = ourGeneratedHTML;
+}

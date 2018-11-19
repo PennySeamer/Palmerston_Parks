@@ -32,3 +32,10 @@ document.getElementById("bellamack").onclick = displayBell;
     listItem.innerHTML +=json.parks[i].Name;
     listItem.innerHTML +=json.parks[i].features;
     displayBell.appendChild(listItem);
+
+
+var ourRequest = new XMLHttpRequest();
+ourRequest.open ("GET", 'https://github.com/PennySeamer/Palmerston_Parks/blob/master/js/parks.json')
+ourRequest,onload = function(){
+  console.log(ourRequest.responseText);
+};
