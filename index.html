@@ -10,40 +10,46 @@
     <!--Bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
   </head>
-
 <body>
   <header>
-      <h1> Palmerston Parks </h1>
-          <nav class="nav nav-pills flex-column flex-sm-row">
-            <a class="flex-sm-fill text-sm-center nav-link" href="../index.html">Home</a>
-              <a class="flex-sm-fill text-sm-center nav-link" href="parks.html">Parks</a>
-          <form class="form-inline my-2 my-lg-0">
-       <input class="form-control mr-sm-2" type="search" placeholder="Find a park" aria-label="Search">
-  </form>
-</nav>
+        <h1> Palmerston Parks </h1>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Home</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Suburbs</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="driver.html">Driver</a>
+      <a class="dropdown-item" href="bakewell.html">Bakewell</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </li>
+  <li class="nav-item">
+      <form class="form-inline my-2 my-lg-0">
+     <input class="form-control mr-sm-2" type="search" placeholder="Find a park" aria-label="Search">
+         </form>
+  </li>
+</ul>
 </header>
 
+<h2> Suburbs </h2>
 
-<div id ="park1"></div>
-
-    <script id ="parksTemplate" type="text/x-handlebars-template">
-      {{#each parks}}
-<div class = "suburbs">
-
-      <h2> {{Location}}</h2>
-      <p> {{Name}} </p>
-      <ul>
-      <li>{{#features}}*{{.}}{{/features}}</li>
-      </ul>
-  </div>
-
-  <div class ="info">
-        <iframe src= "{{map}}"</iframe>
-  </div>
-      {{/each}}
-    </script>
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <a href ="driver.html">Driver</a>
+    <span class="badge badge-primary badge-pill">2</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+      <a href ="bakewell.html">Bakewell</a>
+    <span class="badge badge-primary badge-pill">3</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <a href ="bellamack.html">Bellamack</a>
+    <span class="badge badge-primary badge-pill">2</span>
+  </li>
+</ul>
 
       <script src = "main.js"></script>
       <!--handlebars.js-->
