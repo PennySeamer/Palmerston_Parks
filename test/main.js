@@ -1,3 +1,4 @@
+//get json data
 var ourRequest = new XMLHttpRequest();
 ourRequest.open('GET', 'parks.json');
 ourRequest.onload = function() {
@@ -22,8 +23,10 @@ function createHTML(parksTemplate){
 
   var parksContainer =document.getElementById("park1");
   park1.innerHTML = ourGeneratedHTML;
-}
+};
 
+
+//get json data for suburbs
 
 //  for(var i = 0; i < json.parks.length; i++) {
   //  var listItem = document.createElement('li');
