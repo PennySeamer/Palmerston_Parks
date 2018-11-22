@@ -14,14 +14,15 @@
         <h1> Palmerston Parks </h1>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Home</a>
+    <a class="nav-link active" href="index.html">Home</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Suburbs</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="driver.html">Driver</a>
       <a class="dropdown-item" href="bakewell.html">Bakewell</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="gunn.html">Gunn</a>
+      <a class="dropdown-item" href="rosebery.html">Rosebery</a>
     </div>
   </li>
   <li class="nav-item">
@@ -34,24 +35,14 @@
 
 
 <div id ="park1"></div>
-
-    <script id ="parksTemplate" type="text/x-handlebars-template">
-
+  <script id ="parksTemplate" type="text/x-handlebars-template">
+      {{#each bellamack}}
 <div class = "bellParks">
-
-  <p> {{parks.0.Name}}</p>
-  <ul>
-  <li> {{parks.0.features}}</li>
-  <ul>
-  </div>
-    <!--<div class ="info">
-  <iframe src= "{{parks.0.map}}"</iframe>
-</div> -->
-  <p> {{parks.1.Name}}</p>
-  <ul>
-  <li> {{parks.1.features}}</li>
-</ul>
-    <iframe src= "{{parks.1.map}}"</iframe>
+  <h2> {{Name}}</h2>
+  <li> {{features}}</li>
+    {{/each}}
+<div>
+  <iframe src= "{{bellamack.0.map}}"</iframe>
 </div>
     </script>
 

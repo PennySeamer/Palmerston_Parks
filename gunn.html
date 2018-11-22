@@ -14,15 +14,15 @@
         <h1> Palmerston Parks </h1>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="index.html">Home</a>
+    <a class="nav-link active" href="#">Home</a>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Suburbs</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Suburbs</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="driver.html">Driver</a>
       <a class="dropdown-item" href="bellamack.html">Bellamack</a>
-      <a class="dropdown-item" href="gunn.html">Gunn</a>
       <a class="dropdown-item" href="bakewell.html">Bakewell</a>
+      <a class="dropdown-item" href="rosebery.html">Rosebery/a>
     </div>
   </li>
   <li class="nav-item">
@@ -35,14 +35,16 @@
 
 <div id ="park1"></div>
   <script id ="parksTemplate" type="text/x-handlebars-template">
-      {{#each bakewell}}
+      {{#each gunn}}
 <div class = "bellParks">
 
   <h2> {{Name}}</h2>
+
   <li> {{features}}</li>
+
     {{/each}}
 <div>
-  <iframe src= "{{bakewell.0.map}}"</iframe>
+  <iframe src= "{{gunn.0.map}}"</iframe>
 </div>
     </script>
 
