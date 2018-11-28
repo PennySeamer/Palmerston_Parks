@@ -5,11 +5,11 @@
     {
       "src": "image1.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "512x512"
     }
   ],
   "start_url": "index.html",
-  "background_color": "#3367D6",
+  "background_color": "#42c2f4",
   "display": "standalone",
   "scope": "../",
   "theme_color": "#3367D6"
