@@ -1,6 +1,6 @@
 //get json data
 var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'parks.json');
+ourRequest.open('GET', 'js/parks.json');
 ourRequest.onload = function() {
   if (ourRequest.status >= 200 && ourRequest.status < 400) {
     var parks = JSON.parse(ourRequest.responseText);
