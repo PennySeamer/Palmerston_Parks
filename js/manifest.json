@@ -3,7 +3,7 @@
   "name": "Palmerston Parks",
   "icons": [
     {
-      "src": "image1.png",
+      "src": "image/image1.png",
       "type": "image/png",
       "sizes": "512x512"
     }
