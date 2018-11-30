@@ -7,76 +7,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#42c2f4"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="manifest" href="/js/manifest.json">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 <body>
   <header>
         <h1> Palmerston Parks </h1>
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="index.html">Home</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Suburbs</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="driver.html">Driver</a>
-      <a class="dropdown-item" href="bellamack.html">Bellamack</a>
-      <a class="dropdown-item" href="gunn.html">Gunn</a>
-      <a class="dropdown-item" href="bakewell.html">Bakewell</a>
-    </div>
-  </li>
-
-</ul>
 </header>
-
 <div id ="park1">
-  <script id ="parksTemplate" type="text/x-handlebars-template">
-      {{#each bakewell}}
-<div class = "bakewellParks">
-  <h2> {{Name}}</h2>
-  <li> {{features}}</li>
-<div> <!-- iframe src= "{{bakewell.0.map}}"</iframe> --></div>
-    {{/each}}
+     <script id ="parksTemplate" type="text/x-handlebars-template">
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Bakewell
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse collapsed" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+                    {{#each bakewell}}
+        <h2> {{Name}}</h2>
+     <li> {{features}}</li>
+     {{/each}}
+    <!--<iframe src= "{{bakewell.0.map}}"</iframe>-->
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Gunn
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        {{#each gunn}}
+<h2> {{Name}}</h2>
+<li> {{features}}</li>
+{{/each}}
+    <!--<iframe src= "{{gunn.0.map}}"</iframe>-->
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Rosebery
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        {{#each rosebery}}
+<h2> {{Name}}</h2>
+<li> {{features}}</li>
+{{/each}}
+    <!--<iframe src= "{{rosebery.0.map}}"</iframe>-->
+    </div>
+  </div>
 </div>
-
-
-<div class ="driverParks">
-      {{#each driver}}
-  <h2> {{Name}}</h2>
-  <li> {{features}}</li>
-    {{/each}}
-<div><!--  <iframe src= "{{driver.0.map}}"</iframe> --></div>
-</div>
-
-<div class ="bellParks">
+<div class="card">
+  <div class="card-header" id="headingFour">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      Bellamack
+      </button>
+    </h5>
+  </div>
+  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+    <div class="card-body">
       {{#each bellamack}}
-  <h2> {{Name}}</h2>
-  <li> {{features}}</li>
-    {{/each}}
-<div><!--  <iframe src= "{{bellamack.0.map}}"</iframe> --></div>
+<h2> {{Name}}</h2>
+<li> {{features}}</li>
+{{/each}}
+    <iframe src= "{{bellamack.0.map}}"</iframe>
+  </div>
 </div>
-
-<div class ="gunnParks">
-      {{#each gunn}}
-  <h2> {{Name}}</h2>
-  <li> {{features}}</li>
-    {{/each}}
-<div><!--  <iframe src= "{{gunn.0.map}}"</iframe> --></div>
 </div>
-
-<div class ="roseberyParks">
-      {{#each rosebery}}
-  <h2> {{Name}}</h2>
-  <li> {{features}}</li>
-    {{/each}}
-<div><!--  <iframe src= "{{rosebery.0.map}}"</iframe> --></div>
-</div>
-
 
 </script>
-
   <script src = "main.js"></script>
   <!--handlebars.js-->
   <script src = "handlebars-v4.0.12.js"></script>

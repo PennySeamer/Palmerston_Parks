@@ -25,10 +25,39 @@ list-style-type: none;
 padding-top: 20px;
 }
 
-
+/*buttons for divss*/
+.buttons a {
+  font-size: 16px;
+}
+.buttons a:hover {
+  cursor:pointer;
+  font-size: 16px;
+}
 }
 /*footer*/
 footer{
     padding: 20px 20px 20px;
     text-align: center;
+  }
+
+/*card*/
+  .card img {
+    max-width: 100%;
+  }
+  .card width{
+    width: 18rem;
+  }
+  .card .text {
+    padding: 20px 20px 20px;
+    color: black;
+  }
+  .card .text > button {
+    background: #d6f8bf;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+  }
+  #icon{
+    padding-left: 20px;
   }
