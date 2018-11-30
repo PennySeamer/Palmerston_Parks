@@ -11,24 +11,26 @@ h1{
 h2{
   font-size: 30px;
   padding-left: 20px;
+  padding-top: 30px;
 }
-p{
+ p{
   color:black;
-}
-h3{
   font-style: italic;
-  font-size: 20px;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 li{
-list-style-type: none;
-padding-top: 20px;
-}
-
+list-style-type: circle;
 
 }
+
 /*footer*/
 footer{
     padding: 20px 20px 20px;
     text-align: center;
   }
+
+/*card*/
+.park-body{
+  border-style: groove;
+
+}
