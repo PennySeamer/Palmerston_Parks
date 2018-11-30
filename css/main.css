@@ -11,29 +11,18 @@ h1{
 h2{
   font-size: 30px;
   padding-left: 20px;
+  padding-top: 30px;
 }
-p{
+ p{
   color:black;
-}
-h3{
   font-style: italic;
-  font-size: 20px;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 li{
-list-style-type: none;
-padding-top: 20px;
+list-style-type: circle;
+
 }
 
-/*buttons for divss*/
-.buttons a {
-  font-size: 16px;
-}
-.buttons a:hover {
-  cursor:pointer;
-  font-size: 16px;
-}
-}
 /*footer*/
 footer{
     padding: 20px 20px 20px;
@@ -41,23 +30,7 @@ footer{
   }
 
 /*card*/
-  .card img {
-    max-width: 100%;
-  }
-  .card width{
-    width: 18rem;
-  }
-  .card .text {
-    padding: 20px 20px 20px;
-    color: black;
-  }
-  .card .text > button {
-    background: #d6f8bf;
-    border: 0;
-    color: white;
-    padding: 10px;
-    width: 100%;
-  }
-  #icon{
-    padding-left: 20px;
-  }
+.park-body{
+  border-style: groove;
+
+}
