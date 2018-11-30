@@ -26,6 +26,8 @@ function createHTML(parksTemplate){
 };
 
 
+
+
 //get json data for suburbs
 
 //  for(var i = 0; i < json.parks.length; i++) {
